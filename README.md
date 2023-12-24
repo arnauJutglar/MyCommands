@@ -5,6 +5,6 @@ Just a set of commands I've done that create C, C++ and header templates with th
 
 ### Installation
 With a bash session where you downloaded the package, run:
-'''
+```
 bash install.sh
-'''
+```
