@@ -20,7 +20,7 @@ do
     gcc "$I" -o "${I%.c}"
 done
 
-# Check if there is not already a program with the same name and in that case copy them to the binary commands directory.
+# Check if there isn't already a program with the same name and in that case copy them to the binary commands directory.
 cd bin && \
 for I in *
 do
