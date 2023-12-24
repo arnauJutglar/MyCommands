@@ -38,7 +38,7 @@ int create(char *name) {
         return 1;
     }
     char cmd[MAX_BUFFER];
-    strcpy(cmd, "cp ../resources/tempCpp.cpp ");
+    strcpy(cmd, "cp ~/MyCommands/resources/tempCpp.cpp ");
     strcat(cmd, name);
     strcat(cmd, ".cpp");
 

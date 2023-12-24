@@ -15,13 +15,14 @@ then
 fi
 
 # Compile the C source code.
-for I in src/*.c 
+cd src && \
+for I in *.c 
 do
-    gcc "$I" -o "${I%.c}"
+    gcc "$I" -o "../bin/${I%.c}"
 done
 
 # Check if there isn't already a program with the same name and in that case copy them to the binary commands directory.
-cd bin && \
+cd ../bin && \
 for I in *
 do
     if [ -f ~/MyCommands/bin/"$I" ]
@@ -29,6 +30,18 @@ do
         echo "A command with equal name $I is already installed."
     else
         cp "$I" ~/MyCommands/bin
+    fi 
+done
+
+# Check if there isn't already a program with the same name and in that case copy them to the binary commands directory.
+cd ../resources && \
+for I in *
+do
+    if [ -f ~/MyCommands/resources/"$I" ]
+    then
+        echo "A resource with equal name $I is already installed."
+    else
+        cp "$I" ~/MyCommands/resources
     fi 
 done
 

@@ -38,10 +38,10 @@ int create(char *name) {
         return 1;
     }
     char cmd[MAX_BUFFER];
-    strcpy(cmd, "cp ../resources/tempC.c ");
+    strcpy(cmd, "cp ~/MyCommands/resources/tempC.c ");
     strcat(cmd, name);
     strcat(cmd, ".c");
-
+    
     return system(cmd);
 }
 
